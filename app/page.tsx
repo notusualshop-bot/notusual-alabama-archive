@@ -13,7 +13,7 @@ export default function Home() {
   const randomBg = stadiumImages[Math.floor(Math.random() * stadiumImages.length)];
 
   return (
-    <main className="min-h-screen bg-[#800020] text-white flex flex-col justify-between selection:bg-white selection:text-[#800020]">
+    <main className="min-h-screen bg-[#9e1b32] text-white flex flex-col justify-between selection:bg-white selection:text-[#9e1b32]">
       {/* 挂载自定义复古字体 AlfaSlabOne */}
       <style dangerouslySetInnerHTML={{ __html: `
         @font-face {
@@ -61,16 +61,16 @@ export default function Home() {
             </div>
             
             {/* 轻微压暗确保文字清晰 */}
-            <div className="absolute inset-0 z-1 bg-black/10"></div>
+            <div className="absolute inset-0 z-1 bg-black/15"></div>
 
-            {/* 叠印在图片上的年份与副标题 */}
+            {/* 叠印在图片上的年份与副标题（使用正宗阿拉巴马校色 #9e1b32） */}
             <div className="relative z-10 flex flex-col items-center text-center px-4">
               <div className="transform -rotate-1 mb-1">
-                <span className="block tracking-tight text-[80px] sm:text-[100px] leading-none text-[#800020] vintage-number">
+                <span className="block tracking-tight text-[80px] sm:text-[100px] leading-none text-[#9e1b32] vintage-number">
                   2020
                 </span>
               </div>
-              <p className="tracking-[0.15em] uppercase text-[11px] sm:text-xs font-bold text-[#800020] bg-white/90 px-3 py-1 border border-stone-900">
+              <p className="tracking-[0.15em] uppercase text-[11px] sm:text-xs font-bold text-[#9e1b32] bg-white/95 px-3 py-1 border border-stone-900 shadow-sm">
                 EVERY CORNER TELLS A STORY
               </p>
             </div>
@@ -91,7 +91,7 @@ export default function Home() {
                 href="https://www.etsy.com/shop/notusualcreative"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#800020] hover:bg-[#600018] text-white font-serif font-bold tracking-widest text-xs uppercase px-8 py-3.5 transition-all duration-300 text-center inline-block rounded-none border border-black shadow-sm"
+                className="bg-[#9e1b32] hover:bg-[#7a1325] text-white font-serif font-bold tracking-widest text-xs uppercase px-8 py-3.5 transition-all duration-300 text-center inline-block rounded-none border border-black shadow-sm"
               >
                 SHARE WITH FRIENDS
               </a>
@@ -102,7 +102,7 @@ export default function Home() {
       </div>
 
       {/* 底部：回到官网区块 */}
-      <footer className="w-full bg-[#50000e] py-8 px-4 border-t border-[#3a000a] text-center mt-4">
+      <footer className="w-full bg-[#7a1325] py-8 px-4 border-t border-[#5c0e1b] text-center mt-4">
         <div className="max-w-md mx-auto space-y-2.5">
           <p className="font-serif italic text-[11px] tracking-widest text-white/80 uppercase font-bold">
             NOTUSUAL EDITION
