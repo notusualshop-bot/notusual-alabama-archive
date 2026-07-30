@@ -28,8 +28,8 @@ export default function Home() {
         }
       `}} />
 
-      {/* 顶部：品牌与档案声明区块（紧贴图片，不留大空挡） */}
-      <header className="w-full pt-3 pb-1 px-4 text-center">
+      {/* 顶部：品牌与档案声明区块（完美适配手机屏幕，收紧顶部间距） */}
+      <header className="w-full pt-2 pb-1 px-4 text-center">
         <div className="max-w-md mx-auto space-y-0.5">
           <p className="tracking-[0.3em] uppercase text-[10px] text-white/70 font-light">
             EST. ARCHIVE
@@ -43,13 +43,13 @@ export default function Home() {
         </div>
       </header>
 
-      {/* 中间核心信息区域（采用堆叠卡片设计，暗示下方还有更多档案） */}
+      {/* 中间核心信息区域（堆叠卡片错位调整得更平均、更克制） */}
       <div className="max-w-md sm:max-w-lg mx-auto px-4 pt-1 pb-4 w-full relative">
         
-        {/* 背景堆叠层 2（最底层卡片阴影位） */}
-        <div className="absolute inset-x-4 top-4 bottom-2 bg-stone-300 border-2 border-stone-900 translate-y-3 translate-x-2 pointer-events-none"></div>
-        {/* 背景堆叠层 1（中间层卡片） */}
-        <div className="absolute inset-x-4 top-2 bottom-1 bg-stone-100 border-2 border-stone-900 translate-y-1.5 translate-x-1 pointer-events-none"></div>
+        {/* 背景堆叠层 2（最底层，微调平均错位） */}
+        <div className="absolute inset-x-4 top-3 bottom-2 bg-stone-300 border-2 border-stone-900 translate-y-2 translate-x-1 pointer-events-none"></div>
+        {/* 背景堆叠层 1（中间层，微调平均错位） */}
+        <div className="absolute inset-x-4 top-1.5 bottom-1 bg-stone-100 border-2 border-stone-900 translate-y-1 translate-x-0.5 pointer-events-none"></div>
 
         {/* 主卡片（最顶层） */}
         <div className="relative bg-white text-stone-950 overflow-hidden border-2 border-stone-900 rounded-none">
@@ -111,7 +111,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* 底部：完美消除凹陷，与酒红背景无缝衔接 */}
+      {/* 底部：无缝衔接 */}
       <footer className="w-full bg-[#9e1b32] pt-6 pb-8 px-4 text-center">
         <div className="max-w-md mx-auto space-y-1.5">
           <p className="font-serif italic text-[10px] tracking-widest text-white/80 uppercase font-bold">
