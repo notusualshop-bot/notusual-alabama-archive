@@ -28,8 +28,8 @@ export default function Home() {
         }
       `}} />
 
-      {/* 顶部：品牌与档案声明区块（瘦高字体、亮灰色） */}
-      <header className="w-full pt-4 pb-2 px-4 text-center">
+      {/* 顶部：品牌与档案声明区块（紧贴图片，不留大空挡） */}
+      <header className="w-full pt-3 pb-1 px-4 text-center">
         <div className="max-w-md mx-auto space-y-0.5">
           <p className="tracking-[0.3em] uppercase text-[10px] text-white/70 font-light">
             EST. ARCHIVE
@@ -43,9 +43,16 @@ export default function Home() {
         </div>
       </header>
 
-      {/* 中间核心信息大卡片（去掉浮夸阴影，回归干净复古边框） */}
-      <div className="max-w-md sm:max-w-lg mx-auto px-4 py-2 w-full">
-        <div className="bg-white text-stone-950 shadow-none overflow-hidden border-2 border-stone-900 rounded-none">
+      {/* 中间核心信息区域（采用堆叠卡片设计，暗示下方还有更多档案） */}
+      <div className="max-w-md sm:max-w-lg mx-auto px-4 pt-1 pb-4 w-full relative">
+        
+        {/* 背景堆叠层 2（最底层卡片阴影位） */}
+        <div className="absolute inset-x-4 top-4 bottom-2 bg-stone-300 border-2 border-stone-900 translate-y-3 translate-x-2 pointer-events-none"></div>
+        {/* 背景堆叠层 1（中间层卡片） */}
+        <div className="absolute inset-x-4 top-2 bottom-1 bg-stone-100 border-2 border-stone-900 translate-y-1.5 translate-x-1 pointer-events-none"></div>
+
+        {/* 主卡片（最顶层） */}
+        <div className="relative bg-white text-stone-950 overflow-hidden border-2 border-stone-900 rounded-none">
           
           {/* 卡片上半部分：黑白图片背景 + 叠印层 */}
           <div className="relative w-full h-[240px] sm:h-[270px] flex flex-col items-center justify-center overflow-hidden border-b-2 border-stone-900">
@@ -60,15 +67,15 @@ export default function Home() {
               />
             </div>
             
-            {/* 轻微压暗确保文字清晰 */}
+            {/* 压暗遮罩确保文字清晰 */}
             <div className="absolute inset-0 z-1 bg-black/15"></div>
 
-            {/* 内容区：上方文字也用超级粗体，年份进一步放大 */}
+            {/* 内容区 */}
             <div className="relative z-10 flex flex-col items-center text-center px-4 space-y-1">
-              <p className="tracking-[0.15em] uppercase text-[10px] sm:text-xs font-bold text-stone-900 bg-white/80 px-2 py-0.5 border border-stone-900">
+              <p className="tracking-[0.15em] uppercase text-[10px] sm:text-xs font-bold text-stone-900 bg-white/85 px-2 py-0.5 border border-stone-900">
                 YEAR 2020 — ALABAMA CRIMSON TIDE
               </p>
-              <p className="tracking-[0.1em] uppercase text-[10px] sm:text-[11px] font-bold text-stone-900 bg-white/80 px-2 py-0.5 border border-stone-900">
+              <p className="tracking-[0.1em] uppercase text-[10px] sm:text-[11px] font-bold text-stone-900 bg-white/85 px-2 py-0.5 border border-stone-900">
                 EVERY CORNER TELLS A STORY
               </p>
               <div className="transform -rotate-1 mt-1">
@@ -104,8 +111,8 @@ export default function Home() {
         </div>
       </div>
 
-      {/* 底部：保持色调一致，精简高度 */}
-      <footer className="w-full bg-[#9e1b32] py-5 px-4 border-t border-[#7a1325] text-center mt-2">
+      {/* 底部：完美消除凹陷，与酒红背景无缝衔接 */}
+      <footer className="w-full bg-[#9e1b32] pt-6 pb-8 px-4 text-center">
         <div className="max-w-md mx-auto space-y-1.5">
           <p className="font-serif italic text-[10px] tracking-widest text-white/80 uppercase font-bold">
             NOTUSUAL EDITION
