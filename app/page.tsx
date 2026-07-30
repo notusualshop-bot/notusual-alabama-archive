@@ -43,13 +43,13 @@ export default function Home() {
         </div>
       </header>
 
-      {/* 中间核心信息区域：恢复经典的错落堆叠感，同时完美收敛底部边距 */}
-      <div className="max-w-md sm:max-w-lg mx-auto px-4 pt-1 pb-5 w-full relative">
+      {/* 中间核心信息区域：精准控制底层卡片的偏移，实现右侧那样的匀称堆叠 */}
+      <div className="max-w-md sm:max-w-lg mx-auto px-4 pt-1 pb-4 w-full relative">
         
-        {/* 背景堆叠层 2（最底层卡片） */}
-        <div className="absolute inset-x-4 top-4 bottom-2 bg-stone-300 border-2 border-stone-900 translate-y-3 translate-x-2 pointer-events-none"></div>
-        {/* 背景堆叠层 1（中间层卡片） */}
-        <div className="absolute inset-x-4 top-2 bottom-1 bg-stone-100 border-2 border-stone-900 translate-y-1.5 translate-x-1 pointer-events-none"></div>
+        {/* 背景堆叠层 2（最底层，完美对齐你图示的均匀间距） */}
+        <div className="absolute inset-x-3 top-2.5 bottom-1.5 bg-stone-300 border-2 border-stone-900 translate-y-2 translate-x-1.5 pointer-events-none"></div>
+        {/* 背景堆叠层 1（中间层） */}
+        <div className="absolute inset-x-2 top-1.5 bottom-0.5 bg-stone-100 border-2 border-stone-900 translate-y-1 translate-x-0.75 pointer-events-none"></div>
 
         {/* 主卡片（最顶层） */}
         <div className="relative bg-white text-stone-950 overflow-hidden border-2 border-stone-900 rounded-none shadow-sm">
