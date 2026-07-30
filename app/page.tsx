@@ -28,27 +28,27 @@ export default function Home() {
         }
       `}} />
 
-      {/* 顶部：品牌与档案声明区块（缩小间距） */}
+      {/* 顶部：品牌与档案声明区块（瘦高字体、亮灰色） */}
       <header className="w-full pt-4 pb-2 px-4 text-center">
         <div className="max-w-md mx-auto space-y-0.5">
-          <p className="tracking-[0.25em] uppercase text-[10px] text-white/70 font-semibold">
+          <p className="tracking-[0.3em] uppercase text-[10px] text-white/70 font-light">
             EST. ARCHIVE
           </p>
-          <p className="tracking-[0.2em] uppercase text-xs text-white font-bold">
+          <p className="tracking-[0.25em] uppercase text-xs text-white/90 font-medium">
             NOTUSUAL
           </p>
-          <p className="tracking-[0.15em] uppercase text-xs text-white/90 font-serif">
+          <p className="tracking-[0.2em] uppercase text-xs text-white/70 font-sans font-light">
             ALABAMA CRIMSON TIDE DAILY
           </p>
         </div>
       </header>
 
-      {/* 中间核心信息大卡片 */}
+      {/* 中间核心信息大卡片（去掉浮夸阴影，回归干净复古边框） */}
       <div className="max-w-md sm:max-w-lg mx-auto px-4 py-2 w-full">
-        <div className="bg-white text-stone-950 shadow-[0_25px_50px_rgba(0,0,0,0.6)] overflow-hidden border-2 border-stone-900 rounded-none">
+        <div className="bg-white text-stone-950 shadow-none overflow-hidden border-2 border-stone-900 rounded-none">
           
           {/* 卡片上半部分：黑白图片背景 + 叠印层 */}
-          <div className="relative w-full h-[220px] sm:h-[250px] flex flex-col items-center justify-center overflow-hidden border-b-2 border-stone-900">
+          <div className="relative w-full h-[240px] sm:h-[270px] flex flex-col items-center justify-center overflow-hidden border-b-2 border-stone-900">
             {/* 纯黑白图片背景 */}
             <div className="absolute inset-0 z-0 grayscale contrast-150 brightness-90">
               <Image
@@ -60,19 +60,19 @@ export default function Home() {
               />
             </div>
             
-            {/* 压暗遮罩确保文字清晰 */}
-            <div className="absolute inset-0 z-1 bg-black/10"></div>
+            {/* 轻微压暗确保文字清晰 */}
+            <div className="absolute inset-0 z-1 bg-black/15"></div>
 
-            {/* 内容区：年份放大，改回校色酒红，严格对齐标杆图结构 */}
-            <div className="relative z-10 flex flex-col items-center text-center px-4">
-              <p className="tracking-[0.2em] uppercase text-[10px] sm:text-xs font-bold text-stone-900 mb-1">
-                NO. 2020 — ALABAMA CRIMSON TIDE EDITION
+            {/* 内容区：上方文字也用超级粗体，年份进一步放大 */}
+            <div className="relative z-10 flex flex-col items-center text-center px-4 space-y-1">
+              <p className="tracking-[0.15em] uppercase text-[10px] sm:text-xs font-bold text-stone-900 bg-white/80 px-2 py-0.5 border border-stone-900">
+                YEAR 2020 — ALABAMA CRIMSON TIDE
               </p>
-              <p className="tracking-[0.15em] uppercase text-[10px] text-stone-800 font-semibold mb-1">
+              <p className="tracking-[0.1em] uppercase text-[10px] sm:text-[11px] font-bold text-stone-900 bg-white/80 px-2 py-0.5 border border-stone-900">
                 EVERY CORNER TELLS A STORY
               </p>
-              <div className="transform -rotate-1">
-                <span className="block tracking-tight text-[85px] sm:text-[110px] leading-none text-[#9e1b32] vintage-number drop-shadow-[0_2px_4px_rgba(255,255,255,0.9)]">
+              <div className="transform -rotate-1 mt-1">
+                <span className="block tracking-tight text-[95px] sm:text-[130px] leading-none text-[#9e1b32] vintage-number drop-shadow-[0_2px_4px_rgba(255,255,255,0.9)]">
                   2020
                 </span>
               </div>
@@ -104,7 +104,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* 底部：颜色与主色调一致，高度瘦身 */}
+      {/* 底部：保持色调一致，精简高度 */}
       <footer className="w-full bg-[#9e1b32] py-5 px-4 border-t border-[#7a1325] text-center mt-2">
         <div className="max-w-md mx-auto space-y-1.5">
           <p className="font-serif italic text-[10px] tracking-widest text-white/80 uppercase font-bold">
