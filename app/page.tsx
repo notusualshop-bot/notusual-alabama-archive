@@ -22,9 +22,9 @@ export default function Home() {
         {/* 核心内容区 */}
         <div className="relative z-10 flex flex-col items-center text-center max-w-4xl mx-auto mt-4">
           
-          {/* 超粗复古年份胶囊框 */}
+          {/* 极致加粗复古年份胶囊框 */}
           <div className="bg-white text-[#800020] px-8 py-3 shadow-[0_10px_30px_rgba(0,0,0,0.5)] transform -rotate-1 mb-6 border-2 border-black">
-            <span className="block font-black tracking-tighter text-7xl md:text-8xl leading-none font-serif">
+            <span className="block tracking-tighter text-7xl md:text-8xl leading-none font-black" style={{ fontFamily: 'Arial Black, Impact, sans-serif' }}>
               2020
             </span>
           </div>
