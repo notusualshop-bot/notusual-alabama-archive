@@ -1,9 +1,21 @@
 import Image from "next/image";
 
 export default function Home() {
+  // 随机从 6 张赛场图中挑选一张背景，保持每次刷新都有新鲜感
+  const stadiumImages = [
+    "/stadium-1.jpg",
+    "/stadium-2.jpg",
+    "/stadium-3.jpg",
+    "/stadium-4.jpg",
+    "/stadium-5.jpg",
+    "/stadium-6.jpg",
+  ];
+  // 随机选一张
+  const randomBg = stadiumImages[Math.floor(Math.random() * stadiumImages.length)];
+
   return (
     <main className="min-h-screen bg-[#800020] text-white flex flex-col justify-between selection:bg-white selection:text-[#800020]">
-      {/* 完美挂载你上传的 AlfaSlabOne 专属复古字体 */}
+      {/* 挂载自定义复古字体 AlfaSlabOne */}
       <style dangerouslySetInnerHTML={{ __html: `
         @font-face {
           font-family: 'AlfaSlabOne';
@@ -17,12 +29,12 @@ export default function Home() {
         }
       `}} />
 
-      {/* 顶部英雄区：黑白复古赛场大片背景 */}
+      {/* 顶部英雄区：随机背景图轮换 */}
       <div className="relative w-full min-h-[580px] flex flex-col items-center justify-center px-6 py-16 overflow-hidden border-b border-[#600018]">
-        {/* 背景大图 */}
+        {/* 背景图层（动态随机取自 stadium-1 到 6） */}
         <div className="absolute inset-0 z-0 opacity-35 mix-blend-luminosity contrast-125 scale-105">
           <Image
-            src="/hero-bg.jpg"
+            src={randomBg}
             alt="Alabama Crimson Tide Stadium Archive"
             fill
             className="object-cover object-center"
@@ -36,7 +48,7 @@ export default function Home() {
         {/* 核心内容区 */}
         <div className="relative z-10 flex flex-col items-center text-center max-w-5xl mx-auto mt-8">
           
-          {/* 专属复古字体年份数字，无白底色块，极具张力 */}
+          {/* 专属复古大字体年份数字，无白底，完美加粗 */}
           <div className="mb-6 transform -rotate-1">
             <span className="block tracking-tight text-[110px] md:text-[160px] leading-none text-white drop-shadow-[0_15px_25px_rgba(0,0,0,0.8)] vintage-number">
               2020
