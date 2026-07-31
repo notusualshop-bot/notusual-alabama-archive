@@ -38,7 +38,7 @@ export default function Home() {
             NOTUSUAL
           </p>
           <p className="tracking-[0.2em] uppercase text-xs text-white/70 font-sans font-light">
-            ALABAMA CRIMSON TIDE DAILY
+            BAMA FOOTBALL STORY
           </p>
         </div>
       </header>
@@ -60,7 +60,7 @@ export default function Home() {
             <div className="absolute inset-0 z-0 grayscale contrast-150 brightness-90">
               <Image
                 src={randomBg}
-                alt="Alabama Crimson Tide Stadium Archive"
+                alt="Bama Football Stadium Archive"
                 fill
                 className="object-cover object-center"
                 priority
@@ -73,10 +73,10 @@ export default function Home() {
             {/* 内容区 */}
             <div className="relative z-10 flex flex-col items-center text-center px-4 space-y-1">
               <p className="tracking-[0.15em] uppercase text-[10px] sm:text-xs font-bold text-stone-900 bg-white/85 px-2 py-0.5 border border-stone-900">
-                YEAR 2020 — ALABAMA CRIMSON TIDE
+                YEAR 2020 — BAMA FOOTBALL ARCHIVE
               </p>
               <p className="tracking-[0.1em] uppercase text-[10px] sm:text-[11px] font-bold text-stone-900 bg-white/85 px-2 py-0.5 border border-stone-900">
-                EVERY CORNER TELLS A STORY
+                Turn the Page on Tradition
               </p>
               <div className="transform -rotate-1 mt-1">
                 <span className="block tracking-tight text-[95px] sm:text-[130px] leading-none text-[#9e1b32] vintage-number drop-shadow-[0_2px_4px_rgba(255,255,255,0.9)]">
